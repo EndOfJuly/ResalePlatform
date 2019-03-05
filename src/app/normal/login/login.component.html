@@ -1,21 +1,21 @@
-<div>
-    <nz-card style="width:300px;" nzTitle="Card title">
-        <p>Card content</p>
-        <p>Card content</p>
-        <p>Card content</p>
-      </nz-card>
+<div style="height: 40rem;display: flex;justify-content: center;align-items: center">
   <nz-card style="width:300px;">
-    <div>
+    <div style="text-align: center">
       <p>零售通商家后台系统</p>
     </div>
-    <div>
+    <div class="div_space">
       <input nz-input type="text" placeholder="请输入用户名" [(ngModel)]="account">
     </div>
-    <div>
+    <div class="div_space">
       <input nz-input type="password" placeholder="请输入密码" [(ngModel)]="password">
     </div>
-    <div>
-      <input nz-input type="text" placeholder="请输入验证码" [(ngModel)]="verification">
+    <div class="div_space" style="display: flex;align-items: center;justify-content: space-between">
+      <input style="width: 160px;" nz-input type="text" placeholder="请输入验证码" [(ngModel)]="verification">
+      <canvas id="canvas" width="80" height="32" style="background-color: lightgray" (click)="refresh()"></canvas>
+    </div>
+
+    <div style="text-align: center">
+      <button style="width: 8rem" nz-button nzType="primary" (click)="loginClick()">登 录</button>
     </div>
 
   </nz-card>
