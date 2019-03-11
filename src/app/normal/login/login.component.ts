@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,10 +11,23 @@ export class LoginComponent implements OnInit {
   password;
   verification;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
+
+  ngAfterViewInit() {
+
+    this.drawPic();
+
+  }
+
 
   ngOnInit() {
     // this.drawPic();
+
+    const canvas = <HTMLCanvasElement>document.getElementById('canvas');
+    console.log(canvas);
+
   }
 
   randomNum(min, max) {
@@ -28,7 +42,9 @@ export class LoginComponent implements OnInit {
   }
 
   loginClick() {
-    this.drawPic();
+    console.log('login');
+
+    this.router.navigate(['/home']);
   }
 
   refresh() {

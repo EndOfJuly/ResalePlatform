@@ -10,13 +10,43 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import { DataViewComponent } from './statistics/data-view/data-view.component';
+import { SummarizingComponent } from './resale/summarizing/summarizing.component';
+import { TransactionDetailComponent } from './resale/transaction-detail/transaction-detail.component';
+import { MemberTypeComponent } from './member/member-type/member-type.component';
+import { MemberListComponent } from './member/member-list/member-list.component';
+import { StoreManageComponent } from './store/store-manage/store-manage.component';
+import { StaffAccountComponent } from './store/staff-account/staff-account.component';
+import { TerminalManageComponent } from './store/terminal-manage/terminal-manage.component';
+import { DepartmentManageComponent } from './system/department-manage/department-manage.component';
+import { RoleManageComponent } from './system/role-manage/role-manage.component';
+import { RoleAccreditComponent } from './system/role-accredit/role-accredit.component';
+import { SystemNoticeComponent } from './system/system-notice/system-notice.component';
+import { DiscountComponent } from './operation/discount/discount.component';
+import { MarketingMethodComponent } from './operation/marketing-method/marketing-method.component';
+import { HomeComponent } from './normal/home/home.component';
 
 registerLocaleData(zh);
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    DataViewComponent,
+    SummarizingComponent,
+    TransactionDetailComponent,
+    MemberTypeComponent,
+    MemberListComponent,
+    StoreManageComponent,
+    StaffAccountComponent,
+    TerminalManageComponent,
+    DepartmentManageComponent,
+    RoleManageComponent,
+    RoleAccreditComponent,
+    SystemNoticeComponent,
+    DiscountComponent,
+    MarketingMethodComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

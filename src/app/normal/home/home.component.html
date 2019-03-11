@@ -1,0 +1,77 @@
+<nz-layout class="layout">
+  <nz-header>
+    <div class="logo"></div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;">
+      <li nz-menu-item>集团</li>
+      <li nz-menu-item>门店</li>
+      <li nz-menu-item>一级导航</li>
+      <li nz-menu-item>二级导航</li>
+    </ul>
+  </nz-header>
+  <nz-layout>
+    <nz-sider [nzWidth]="200" style="background:#fff">
+      <ul nz-menu [nzMode]="'inline'" style="height:100%">
+        <li nz-submenu>
+          <span title>
+            <i nz-icon type="line-chart" theme="outline"></i>统计</span>
+          <ul>
+            <li nz-menu-item (nzClick)="itemClick($event)">数据概览</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title>
+            <i nz-icon type="credit-card" theme="outline"></i>零售</span>
+          <ul>
+            <li nz-menu-item (nzClick)="itemClick()">销售汇总</li>
+            <li nz-menu-item (nzClick)="itemClick()">交易明细</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title>
+            <i nz-icon type="home" theme="outline"></i>门店</span>
+          <ul>
+            <li nz-menu-item (nzClick)="itemClick()">门店管理</li>
+            <li nz-menu-item (nzClick)="itemClick()">员工账号</li>
+            <li nz-menu-item (nzClick)="itemClick()">终端管理</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title>
+            <i nz-icon type="team" theme="outline"></i>会员</span>
+          <ul>
+            <li nz-menu-item (nzClick)="itemClick()">会员类别</li>
+            <li nz-menu-item (nzClick)="itemClick()">会员列表</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title>
+            <i nz-icon type="appstore" theme="outline"></i>营销</span>
+          <ul>
+            <li nz-menu-item (nzClick)="itemClick()">优惠券</li>
+            <li nz-menu-item (nzClick)="itemClick()">线下活动</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title>
+            <i nz-icon type="setting" theme="outline"></i>系统</span>
+          <ul>
+            <li nz-menu-item (nzClick)="itemClick()">部门设置</li>
+            <li nz-menu-item>角色管理</li>
+            <li nz-menu-item>角色授权</li>
+            <li nz-menu-item>升级公告</li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+    <nz-layout style="padding:0 24px 24px">
+      <nz-breadcrumb style="margin:16px 0;">
+        <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+        <nz-breadcrumb-item>List</nz-breadcrumb-item>
+        <nz-breadcrumb-item>App</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <nz-content style="background:#fff; padding: 24px; height: 20rem;">
+        <app-data-view></app-data-view>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>
