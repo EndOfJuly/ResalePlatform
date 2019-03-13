@@ -1,3 +1,37 @@
-<p>
-  store-manage works!
-</p>
+<div style="display: flex;justify-content: space-between;margin-bottom: 1rem">
+  <div>
+    <input style="display: inline-block;width: 15rem" nz-input placeholder="请输入订单号" [(ngModel)]="searchCondition">
+    <span style="margin-left: 1rem;display: inline-block;">高级搜索</span>
+  </div>
+  <div>
+    <button style="width: 4rem;height: 2rem;" nz-button nzType="primary">新增</button>
+  </div>
+</div>
+<div style="margin-top: 0.5rem">
+  <nz-table #borderedTable nzBordered [nzData]="tmpData" [nzPageSize]="10">
+    <thead>
+      <tr>
+        <th>编码</th>
+        <th>门店名称</th>
+        <th>联系人</th>
+        <th>联系电话</th>
+        <th>所属区域</th>
+        <th>详细地址</th>
+        <th>状态</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of borderedTable.data">
+        <td>{{data.storeNumber}}</td>
+        <td>{{data.storeName}}</td>
+        <td>{{data.storeContact}}</td>
+        <td>{{data.contactTele}}</td>
+        <td>{{data.region}}</td>
+        <td>{{data.address}}</td>
+        <td>{{data.storeStatus}}</td>
+        <td>{{data.storeOperation}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

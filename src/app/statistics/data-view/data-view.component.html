@@ -1,3 +1,77 @@
-<p>
-  data-view works!
-</p>
+<div style="display: flex;text-align: center; justify-content: space-around;">
+  <nz-card style="text-align: left">
+    <div class="color-gray">
+      总销售额
+    </div>
+    <div class="font-max">
+      126,560
+    </div>
+    <div style="margin-top:1rem;margin-bottom: 1rem">
+      <div class="color-gray" style="display: inline-block;">周同比</div>
+      <i nz-icon type="caret-up" theme="outline"></i>
+      <div style="display: inline-block;">12％</div>
+      &nbsp;&nbsp;&nbsp;
+      <div class="color-gray" style="display: inline-block;">日环比</div>
+      <i nz-icon type="caret-down" theme="outline"></i>
+      <div style="display: inline-block;">11％</div>
+    </div>
+    <hr class="color-lightgray">
+    <div>
+      日均销售额 ¥12,423
+    </div>
+  </nz-card>
+
+  <nz-card style="text-align: left">
+    <div class="color-gray">
+      会员总数
+    </div>
+    <div class="font-max">
+      8,846
+    </div>
+    <div style="margin-top:1rem;margin-bottom: 1rem">
+      <div style="margin-top:1rem;margin-bottom: 1rem">
+        <div class="color-gray" style="display: inline-block;">周同比</div>
+        <i nz-icon type="caret-up" theme="outline"></i>
+        <div style="display: inline-block;">12％</div>
+        &nbsp;&nbsp;&nbsp;
+        <div class="color-gray" style="display: inline-block;">日环比</div>
+        <i nz-icon type="caret-down" theme="outline"></i>
+        <div style="display: inline-block;">11％</div>
+      </div>
+    </div>
+    <hr class="color-lightgray">
+    <div>
+      日增量 ¥423
+    </div>
+  </nz-card>
+
+  <nz-card style="text-align: left">
+    <div class="color-gray">
+      总销售额
+    </div>
+    <div class="font-max">
+      6,560
+    </div>
+    <div style="margin-top:1rem;margin-bottom: 1rem">
+      <div class="color-gray" style="display: inline-block;">周同比</div>
+      <i nz-icon type="caret-up" theme="outline"></i>
+      <div style="display: inline-block;">12％</div>
+      &nbsp;&nbsp;&nbsp;
+      <div class="color-gray" style="display: inline-block;">日环比</div>
+      <i nz-icon type="caret-down" theme="outline"></i>
+      <div style="display: inline-block;">11％</div>
+    </div>
+    <hr class="color-lightgray">
+    <div>
+      成交率 99%
+    </div>
+  </nz-card>
+</div>
+<div style="margin: 1rem -1.5rem 1rem -1.5rem;background: #f0f2f5;height: 2rem;"></div>
+<div style="display: flex;justify-content: space-between">
+  <div class="font-middle" style="display: inline-block">销售额</div>
+  <div style="display: inline-block">
+    <nz-range-picker style="display: inline-block" [(ngModel)]="dateRange" (ngModelChange)="onChange($event)" nzShowTime></nz-range-picker>
+  </div>
+</div>
+<div echarts [options]="chartOption" class="demo-chart" style="width: 100%;"></div>

@@ -26,6 +26,8 @@ import { DiscountComponent } from './operation/discount/discount.component';
 import { MarketingMethodComponent } from './operation/marketing-method/marketing-method.component';
 import { HomeComponent } from './normal/home/home.component';
 
+import {NgxEchartsModule} from 'ngx-echarts';
+
 registerLocaleData(zh);
 
 @NgModule({
@@ -54,7 +56,8 @@ registerLocaleData(zh);
     FormsModule,
     NgZorroAntdModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxEchartsModule
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]

@@ -1,3 +1,43 @@
-<p>
-  summarizing works!
-</p>
+<div style="display: flex;justify-content: space-between;margin-bottom: 1rem">
+  <div>
+    <input style="display: inline-block;width: 15rem" nz-input placeholder="请输入订单号" [(ngModel)]="searchCondition">
+    <span style="margin-left: 1rem;display: inline-block;">高级搜索</span>
+  </div>
+  <div>
+    <button style="width: 4rem;height: 2rem;" nz-button nzType="primary">导出</button>
+  </div>
+</div>
+<div>共有
+  <span class="color-red">188</span>笔销售单，销售额总计
+  <span class="color-red">¥100,000</span>
+</div>
+<div style="margin-top: 0.5rem">
+  <nz-table #borderedTable nzBordered [nzData]="tmpData" [nzPageSize]="10">
+    <thead>
+      <tr>
+        <th>销售单号</th>
+        <th>销售时间</th>
+        <th>会员手机</th>
+        <th>销售金额</th>
+        <th>门店名称</th>
+        <th>商品数量</th>
+        <th>收银人员</th>
+        <th>状态</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of borderedTable.data">
+        <td>{{data.saleOrder}}</td>
+        <td>{{data.saleTime}}</td>
+        <td>{{data.memberTele}}</td>
+        <td>{{data.saleAmount}}</td>
+        <td>{{data.storeName}}</td>
+        <td>{{data.goodsQuentity}}</td>
+        <td>{{data.cashier}}</td>
+        <td>{{data.orderStatus}}</td>
+        <td>{{data.operation}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

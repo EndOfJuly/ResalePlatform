@@ -15,50 +15,50 @@
           <span title>
             <i nz-icon type="line-chart" theme="outline"></i>统计</span>
           <ul>
-            <li nz-menu-item (nzClick)="itemClick($event)">数据概览</li>
+            <li nz-menu-item (click)="itemClick('data-view')">数据概览</li>
           </ul>
         </li>
         <li nz-submenu>
           <span title>
             <i nz-icon type="credit-card" theme="outline"></i>零售</span>
           <ul>
-            <li nz-menu-item (nzClick)="itemClick()">销售汇总</li>
-            <li nz-menu-item (nzClick)="itemClick()">交易明细</li>
+            <li nz-menu-item (click)="itemClick('summarizing')">销售汇总</li>
+            <li nz-menu-item (click)="itemClick('transaction-detail')">交易明细</li>
           </ul>
         </li>
         <li nz-submenu>
           <span title>
             <i nz-icon type="home" theme="outline"></i>门店</span>
           <ul>
-            <li nz-menu-item (nzClick)="itemClick()">门店管理</li>
-            <li nz-menu-item (nzClick)="itemClick()">员工账号</li>
-            <li nz-menu-item (nzClick)="itemClick()">终端管理</li>
+            <li nz-menu-item (click)="itemClick('store-manage')">门店管理</li>
+            <li nz-menu-item (click)="itemClick('staff-account')">员工账号</li>
+            <li nz-menu-item (click)="itemClick('terminal-manage')">终端管理</li>
           </ul>
         </li>
         <li nz-submenu>
           <span title>
             <i nz-icon type="team" theme="outline"></i>会员</span>
           <ul>
-            <li nz-menu-item (nzClick)="itemClick()">会员类别</li>
-            <li nz-menu-item (nzClick)="itemClick()">会员列表</li>
+            <li nz-menu-item (click)="itemClick('member-type')">会员类别</li>
+            <li nz-menu-item (click)="itemClick('member-list')">会员列表</li>
           </ul>
         </li>
         <li nz-submenu>
           <span title>
             <i nz-icon type="appstore" theme="outline"></i>营销</span>
           <ul>
-            <li nz-menu-item (nzClick)="itemClick()">优惠券</li>
-            <li nz-menu-item (nzClick)="itemClick()">线下活动</li>
+            <li nz-menu-item (click)="itemClick('discount')">优惠券</li>
+            <li nz-menu-item (click)="itemClick('marketing-method')">线下活动</li>
           </ul>
         </li>
         <li nz-submenu>
           <span title>
             <i nz-icon type="setting" theme="outline"></i>系统</span>
           <ul>
-            <li nz-menu-item (nzClick)="itemClick()">部门设置</li>
-            <li nz-menu-item>角色管理</li>
-            <li nz-menu-item>角色授权</li>
-            <li nz-menu-item>升级公告</li>
+            <li nz-menu-item (click)="itemClick('department-manage')">部门设置</li>
+            <li nz-menu-item (click)="itemClick('role-manage')">角色管理</li>
+            <li nz-menu-item (click)="itemClick('role-accredit')">角色授权</li>
+            <li nz-menu-item (click)="itemClick('system-notice')">升级公告</li>
           </ul>
         </li>
       </ul>
@@ -69,8 +69,23 @@
         <nz-breadcrumb-item>List</nz-breadcrumb-item>
         <nz-breadcrumb-item>App</nz-breadcrumb-item>
       </nz-breadcrumb>
-      <nz-content style="background:#fff; padding: 24px; height: 20rem;">
-        <app-data-view></app-data-view>
+      <nz-content style="background:#fff; padding: 24px; height: 20rem; min-width: 60rem;min-height: 45rem">
+        <div [ngSwitch]="content">
+          <app-data-view *ngSwitchCase="'data-view'"></app-data-view>
+          <app-summarizing *ngSwitchCase="'summarizing'"></app-summarizing>
+          <app-transaction-detail *ngSwitchCase="'transaction-detail'"></app-transaction-detail>
+          <app-store-manage *ngSwitchCase="'store-manage'"></app-store-manage>
+          <app-staff-account *ngSwitchCase="'staff-account'"></app-staff-account>
+          <app-terminal-manage *ngSwitchCase="'terminal-manage'"></app-terminal-manage>
+          <app-member-type *ngSwitchCase="'member-type'"></app-member-type>
+          <app-member-list *ngSwitchCase="'member-list'"></app-member-list>
+          <app-discount *ngSwitchCase="'discount'"></app-discount>
+          <app-marketing-method *ngSwitchCase="'marketing-method'"></app-marketing-method>
+          <app-department-manage *ngSwitchCase="'department-manage'"></app-department-manage>
+          <app-role-manage *ngSwitchCase="'role-manage'"></app-role-manage>
+          <app-role-accredit *ngSwitchCase="'role-accredit'"></app-role-accredit>
+          <app-system-notice *ngSwitchCase="'system-notice'"></app-system-notice>
+        </div>
       </nz-content>
     </nz-layout>
   </nz-layout>

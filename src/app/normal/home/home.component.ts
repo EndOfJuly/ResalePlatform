@@ -6,16 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  // content = 'data-view';
+  content = 'summarizing';
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  itemClick(event) {
-    console.log('item click');
-
-    console.log(event);
+  itemClick(content) {
+    console.log(content);
+    this.content = content;
 
   }
 }

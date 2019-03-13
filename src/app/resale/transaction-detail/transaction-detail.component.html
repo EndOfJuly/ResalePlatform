@@ -1,3 +1,43 @@
-<p>
-  transaction-detail works!
-</p>
+<div style="display: flex;justify-content: space-between;margin-bottom: 1rem">
+  <div>
+    <input style="display: inline-block;width: 15rem" nz-input placeholder="请输入订单号" [(ngModel)]="searchCondition">
+    <span style="margin-left: 1rem;display: inline-block;">高级搜索</span>
+  </div>
+  <div>
+    <button style="width: 4rem;height: 2rem;" nz-button nzType="primary">导出</button>
+  </div>
+</div>
+<div style="margin-top: 0.5rem">
+  <nz-table #borderedTable nzBordered [nzData]="tmpData" [nzPageSize]="10">
+    <thead>
+      <tr>
+        <th>商品名称</th>
+        <th>商品编号</th>
+        <th>销售方式</th>
+        <th>数量</th>
+        <th>常规销售价</th>
+        <th>用户购买价</th>
+        <th>交易状态</th>
+        <th>销售门店</th>
+        <th>收银人员</th>
+        <th>销售时间</th>
+        <th>?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of borderedTable.data">
+        <td>{{data.goodsName}}</td>
+        <td>{{data.goodsNumber}}</td>
+        <td>{{data.saleType}}</td>
+        <td>{{data.goodsQuentity}}</td>
+        <td>{{data.normalPrice}}</td>
+        <td>{{data.realPrice}}</td>
+        <td>{{data.saleStatus}}</td>
+        <td>{{data.store}}</td>
+        <td>{{data.cashier}}</td>
+        <td>{{data.saleTime}}</td>
+        <td>{{data.what}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>
