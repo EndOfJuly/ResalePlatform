@@ -1,3 +1,29 @@
-<p>
-  marketing-method works!
-</p>
+<div style="display: flex;justify-content: space-between;margin-bottom: 1rem">
+  <div>
+    <input style="display: inline-block;width: 15rem" nz-input placeholder="请输入订单号" [(ngModel)]="searchCondition">
+    <span style="margin-left: 1rem;display: inline-block;">高级搜索</span>
+  </div>
+  <div>
+    <button style="width: 4rem;height: 2rem;" nz-button nzType="primary">新增活动</button>
+  </div>
+</div>
+<div style="margin-top: 0.5rem">
+  <nz-table #borderedTable nzBordered [nzData]="tmpData" [nzPageSize]="10">
+    <thead>
+      <tr>
+        <th>编号</th>
+        <th>详情</th>
+        <th>活动时间</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of borderedTable.data">
+        <td>{{data.activityNumber}}</td>
+        <td>{{data.activityDetail}}</td>
+        <td>{{data.activityTime}}</td>
+        <td>{{data.activityOperation}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

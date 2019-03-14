@@ -11,7 +11,7 @@ export class SummarizingComponent implements OnInit {
     {
       saleOrder: 'ZDXS2018042810233',
       saleTime: '2018-12-28 10:00',
-      memberTele: 188888888888,
+      memberTel: 188888888888,
       saleAmount: '880.00',
       storeName: '麦麦（幸福店）',
       goodsQuentity: '商品数量',
@@ -22,7 +22,7 @@ export class SummarizingComponent implements OnInit {
     {
       saleOrder: 'ZDXS2018042810240',
       saleTime: '2018-12-28 10:00',
-      memberTele: 188888888888,
+      memberTel: 188888888888,
       saleAmount: '880.00',
       storeName: '麦麦（幸福店）',
       goodsQuentity: '商品数量',
@@ -33,7 +33,7 @@ export class SummarizingComponent implements OnInit {
     {
       saleOrder: 'ZDXS2018042810241',
       saleTime: '2018-12-28 10:00',
-      memberTele: 188888888888,
+      memberTel: 188888888888,
       saleAmount: '880.00',
       storeName: '麦麦（幸福店）',
       goodsQuentity: '商品数量',
@@ -44,7 +44,7 @@ export class SummarizingComponent implements OnInit {
     {
       saleOrder: 'ZDXS2018042810245',
       saleTime: '2018-12-28 10:00',
-      memberTele: 188888888888,
+      memberTel: 188888888888,
       saleAmount: '880.00',
       storeName: '麦麦（幸福店）',
       goodsQuentity: '商品数量',

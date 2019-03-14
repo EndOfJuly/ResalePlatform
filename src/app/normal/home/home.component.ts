@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  // content = 'data-view';
-  content = 'summarizing';
+  content = 'data-view';
 
   constructor() { }
 

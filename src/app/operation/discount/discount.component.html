@@ -1,3 +1,41 @@
-<p>
-  discount works!
-</p>
+<div style="display: flex;justify-content: space-between;margin-bottom: 1rem">
+  <div>
+    <input style="display: inline-block;width: 15rem" nz-input placeholder="请输入订单号" [(ngModel)]="searchCondition">
+    <span style="margin-left: 1rem;display: inline-block;">高级搜索</span>
+  </div>
+  <div>
+    <button style="width: 4rem;height: 2rem;" nz-button nzType="primary">新增优惠券</button>
+  </div>
+</div>
+<div style="margin-top: 0.5rem">
+  <nz-table #borderedTable nzBordered [nzData]="tmpData" [nzPageSize]="10">
+    <thead>
+      <tr>
+        <th>编号</th>
+        <th>优惠券名称</th>
+        <th>券总数</th>
+        <th>已领取量</th>
+        <th>使用期限</th>
+        <th>面值</th>
+        <th>使用范围</th>
+        <th>类型</th>
+        <th>状态</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of borderedTable.data">
+        <td>{{data.discountNumber}}</td>
+        <td>{{data.discountName}}</td>
+        <td>{{data.discountAmount}}</td>
+        <td>{{data.usedDiscountAmount}}</td>
+        <td>{{data.discountIndate}}</td>
+        <td>{{data.discountCut}}</td>
+        <td>{{data.usableRange}}</td>
+        <td>{{data.discountType}}</td>
+        <td>{{data.discountStatus}}</td>
+        <td>{{data.what}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

@@ -9,13 +9,13 @@
     </ul>
   </nz-header>
   <nz-layout>
-    <nz-sider [nzWidth]="200" style="background:#fff">
+    <nz-sider [nzCollapsed]="false" [nzWidth]="200" style="background:#fff">
       <ul nz-menu [nzMode]="'inline'" style="height:100%">
-        <li nz-submenu>
+        <li nz-submenu [nzOpen]="true">
           <span title>
             <i nz-icon type="line-chart" theme="outline"></i>统计</span>
           <ul>
-            <li nz-menu-item (click)="itemClick('data-view')">数据概览</li>
+            <li nz-menu-item [nzSelected]="true" (click)="itemClick('data-view')">数据概览</li>
           </ul>
         </li>
         <li nz-submenu>
