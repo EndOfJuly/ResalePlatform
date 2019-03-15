@@ -27,6 +27,8 @@ import { MarketingMethodComponent } from './operation/marketing-method/marketing
 import { HomeComponent } from './normal/home/home.component';
 
 import {NgxEchartsModule} from 'ngx-echarts';
+import { NewDiscountComponent } from './operation/new-discount/new-discount.component';
+import { NewMarketingMethodComponent } from './operation/new-marketing-method/new-marketing-method.component';
 
 registerLocaleData(zh);
 
@@ -48,7 +50,9 @@ registerLocaleData(zh);
     SystemNoticeComponent,
     DiscountComponent,
     MarketingMethodComponent,
-    HomeComponent
+    HomeComponent,
+    NewDiscountComponent,
+    NewMarketingMethodComponent
   ],
   imports: [
     BrowserModule,
