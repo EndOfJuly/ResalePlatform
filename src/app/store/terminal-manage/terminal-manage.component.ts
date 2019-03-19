@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-terminal-manage',
@@ -60,9 +61,16 @@ export class TerminalManageComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  createTerminal(type) {
+    console.log(type);
+    this.router.navigate(['./store/terminal-manage/edit-terminal']);
   }
 
 }

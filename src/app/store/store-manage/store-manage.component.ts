@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-store-manage',
@@ -50,9 +51,16 @@ export class StoreManageComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  createStoreClick(type) {
+    console.log(type);
+    this.router.navigate(['/home/store/store-manage/edit-store']);
   }
 
 }

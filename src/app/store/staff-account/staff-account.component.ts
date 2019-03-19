@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-staff-account',
@@ -61,9 +62,16 @@ export class StaffAccountComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+
+  editStore(type) {
+    this.router.navigate(['/home/store/staff-account/edit-staff']);
   }
 
 }

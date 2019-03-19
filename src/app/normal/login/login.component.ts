@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
   loginClick() {
     console.log('login');
 
-    this.router.navigate(['/home']);
+    this.router.navigate(['/home/statistics/data-view']);
   }
 
   refresh() {
