@@ -1,6 +1,6 @@
 <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
   <nz-form-item>
-    <nz-form-label [nzSpan]="3" nzRequired>门店名称</nz-form-label>
+    <nz-form-label [nzSpan]="3">门店名称</nz-form-label>
     <nz-form-control [nzSpan]="12" nzHasFeedback>
       <input nz-input formControlName="storeName" placeholder="请输入门店名称">
       <nz-form-explain *ngIf="validateForm.get('storeName')?.dirty && validateForm.get('storeName')?.errors">
@@ -18,7 +18,7 @@
   </nz-form-item>
 
   <nz-form-item>
-    <nz-form-label [nzSpan]="3" nzRequired>地址</nz-form-label>
+    <nz-form-label [nzSpan]="3">地址</nz-form-label>
     <nz-form-control [nzSpan]="12" nzHasFeedback>
       <input nz-input formControlName="storeAddress" placeholder="请输入门店地址">
       <nz-form-explain *ngIf="validateForm.get('storeAddress')?.dirty && validateForm.get('storeAddress')?.errors">
@@ -27,7 +27,7 @@
     </nz-form-control>
   </nz-form-item>
   <nz-form-item>
-    <nz-form-label [nzSpan]="3" nzRequired>联系人</nz-form-label>
+    <nz-form-label [nzSpan]="3">联系人</nz-form-label>
     <nz-form-control [nzSpan]="12" nzHasFeedback>
       <input nz-input formControlName="storeContact" placeholder="请输入联系人">
       <nz-form-explain *ngIf="validateForm.get('storeContact')?.dirty && validateForm.get('storeContact')?.errors">
@@ -36,7 +36,7 @@
     </nz-form-control>
   </nz-form-item>
   <nz-form-item>
-    <nz-form-label [nzSpan]="3" nzRequired>联系电话</nz-form-label>
+    <nz-form-label [nzSpan]="3">联系电话</nz-form-label>
     <nz-form-control [nzSpan]="12" nzHasFeedback>
       <input nz-input formControlName="contactTel" placeholder="请输入联系电话">
       <nz-form-explain *ngIf="validateForm.get('contactTel')?.dirty && validateForm.get('contactTel')?.errors">
@@ -49,7 +49,7 @@
     <nz-form-control [nzSpan]="7" [nzOffset]="6">
       <div style="display: flex;justify-content: space-around">
         <button nz-button nzType="primary">保存</button>
-        <button nz-button>取消</button>
+        <button nz-button (click)="cancelClick()">取消</button>
       </div>
     </nz-form-control>
   </nz-form-item>

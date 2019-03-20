@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Observable, Observer } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-store',
@@ -45,7 +46,8 @@ export class EditStoreComponent implements OnInit {
   values: any[] | null = null;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) {
 
   }
@@ -62,6 +64,12 @@ export class EditStoreComponent implements OnInit {
 
   onChanges(values: any): void {
     console.log(values, this.values);
+  }
+
+
+
+  cancelClick() {
+    this.router.navigate(['/home/store/store-manage']);
   }
 
 }
