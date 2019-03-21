@@ -12,7 +12,7 @@ export class StaffAccountComponent implements OnInit {
     {
       staffNumber: '0001',
       staffName: '麦麦',
-      staffTel: '188888888888',
+      staffTel: '18888888888',
       store: '麦麦（幸福店）',
       loginCount: '10',
       lastLoginTime: '2018-12-25 10:00',
@@ -22,7 +22,7 @@ export class StaffAccountComponent implements OnInit {
     {
       staffNumber: '0002',
       staffName: '麦麦',
-      staffTel: '188888888888',
+      staffTel: '18888888888',
       store: '麦麦（幸福店）',
       loginCount: '10',
       lastLoginTime: '2018-12-25 10:00',
@@ -32,7 +32,7 @@ export class StaffAccountComponent implements OnInit {
     {
       staffNumber: '0003',
       staffName: '麦麦',
-      staffTel: '188888888888',
+      staffTel: '18888888888',
       store: '麦麦（幸福店）',
       loginCount: '10',
       lastLoginTime: '2018-12-25 10:00',
@@ -42,7 +42,7 @@ export class StaffAccountComponent implements OnInit {
     {
       staffNumber: '0004',
       staffName: '麦麦',
-      staffTel: '188888888888',
+      staffTel: '18888888888',
       store: '麦麦（幸福店）',
       loginCount: '10',
       lastLoginTime: '2018-12-25 10:00',
@@ -52,7 +52,7 @@ export class StaffAccountComponent implements OnInit {
     {
       staffNumber: '0005',
       staffName: '麦麦',
-      staffTel: '188888888888',
+      staffTel: '18888888888',
       store: '麦麦（幸福店）',
       loginCount: '10',
       lastLoginTime: '2018-12-25 10:00',

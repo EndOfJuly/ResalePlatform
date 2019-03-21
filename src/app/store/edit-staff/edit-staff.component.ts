@@ -51,5 +51,8 @@ export class EditStaffComponent implements OnInit {
   ngOnInit() {
   }
 
+  cancelClick() {
+    this.router.navigate(['/home/store/staff-account']);
+  }
 
 }

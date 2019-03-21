@@ -1,64 +1,73 @@
-<nz-card nzTitle="员工账号" style="width: 35rem;">
-  <form nzForm [formGroup]="validateForm">
-    <nz-form-item>
-      <nz-form-label [nzSpan]="6">员工编号</nz-form-label>
-      <nz-form-control [nzSpan]="12" nzHasFeedback>
-        <input nz-input formControlName="staffNumber" placeholder="请输入门店名称">
-      </nz-form-control>
-    </nz-form-item>
+<!-- <nz-card nzTitle="员工账号" style="width: 35rem;"> -->
+<form nzForm [formGroup]="validateForm">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="3">员工编号</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzHasFeedback>
+      <input nz-input formControlName="staffNumber" placeholder="请输入门店名称">
+    </nz-form-control>
+  </nz-form-item>
 
-    <nz-form-item>
-      <nz-form-label [nzSpan]="6">员工姓名</nz-form-label>
-      <nz-form-control [nzSpan]="12" nzHasFeedback>
-        <input nz-input formControlName="staffName" placeholder="请输入员工姓名">
-        <nz-form-explain *ngIf="validateForm.get('staffName')?.dirty && validateForm.get('staffName')?.errors">
-          门店名称为3-10位
-        </nz-form-explain>
-      </nz-form-control>
-    </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="3">员工姓名</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzHasFeedback>
+      <input nz-input formControlName="staffName" placeholder="请输入员工姓名">
+      <nz-form-explain *ngIf="validateForm.get('staffName')?.dirty && validateForm.get('staffName')?.errors">
+        门店名称为3-10位
+      </nz-form-explain>
+    </nz-form-control>
+  </nz-form-item>
 
-    <nz-form-item>
-      <nz-form-label [nzSpan]="6">联系方式</nz-form-label>
-      <nz-form-control [nzSpan]="12" nzHasFeedback>
-        <input nz-input formControlName="staffTel" placeholder="请输入联系方式">
-        <nz-form-explain *ngIf="validateForm.get('staffTel')?.dirty && validateForm.get('staffTel')?.errors">
-          门店名称为3-10位
-        </nz-form-explain>
-      </nz-form-control>
-    </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="3">联系方式</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzHasFeedback>
+      <input nz-input formControlName="staffTel" placeholder="请输入联系方式">
+      <nz-form-explain *ngIf="validateForm.get('staffTel')?.dirty && validateForm.get('staffTel')?.errors">
+        门店名称为3-10位
+      </nz-form-explain>
+    </nz-form-control>
+  </nz-form-item>
 
-    <nz-form-item>
-      <nz-form-label [nzSpan]="6">登录密码</nz-form-label>
-      <nz-form-control [nzSpan]="12" nzHasFeedback>
-        <input nz-input formControlName="staffPassword" placeholder="请输入登录密码">
-        <nz-form-explain *ngIf="validateForm.get('staffPassword')?.dirty && validateForm.get('staffPassword')?.errors">
-          登录密码为3-10位
-        </nz-form-explain>
-      </nz-form-control>
-    </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="3">登录密码</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzHasFeedback>
+      <input nz-input formControlName="staffPassword" placeholder="请输入登录密码">
+      <nz-form-explain *ngIf="validateForm.get('staffPassword')?.dirty && validateForm.get('staffPassword')?.errors">
+        登录密码为3-10位
+      </nz-form-explain>
+    </nz-form-control>
+  </nz-form-item>
 
-    <nz-form-item>
-      <nz-form-label [nzSpan]="6">操作门店</nz-form-label>
-      <nz-form-control [nzSpan]="12">
-        <nz-select formControlName="store">
-          <div *ngFor="let perStore of storeList">
-            <nz-option [nzLabel]="perStore.storeName" [nzValue]="perStore.storeNumber"></nz-option>
-          </div>
-        </nz-select>
-      </nz-form-control>
-    </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="3">操作门店</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <nz-select formControlName="store">
+        <div *ngFor="let perStore of storeList">
+          <nz-option [nzLabel]="perStore.storeName" [nzValue]="perStore.storeNumber"></nz-option>
+        </div>
+      </nz-select>
+    </nz-form-control>
+  </nz-form-item>
 
-    <nz-form-item>
-      <nz-form-label [nzSpan]="6">账号角色</nz-form-label>
-      <nz-form-control [nzSpan]="12">
-        <nz-select formControlName="roleName">
-          <div *ngFor="let perRole of roleList">
-            <nz-option [nzLabel]="perRole.roleName" [nzValue]="perRole.roleNumber"></nz-option>
-          </div>
-        </nz-select>
-      </nz-form-control>
-    </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="3">账号角色</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <nz-select formControlName="roleName">
+        <div *ngFor="let perRole of roleList">
+          <nz-option [nzLabel]="perRole.roleName" [nzValue]="perRole.roleNumber"></nz-option>
+        </div>
+      </nz-select>
+    </nz-form-control>
+  </nz-form-item>
 
-  </form>
+  <nz-form-item nz-row style="margin-bottom:8px;">
+    <nz-form-control [nzSpan]="7" [nzOffset]="6">
+      <div style="display: flex;justify-content: space-around">
+        <button nz-button nzType="primary">保存</button>
+        <button nz-button (click)="cancelClick()">取消</button>
+      </div>
+    </nz-form-control>
+  </nz-form-item>
 
-</nz-card>
+</form>
+
+<!-- </nz-card> -->
