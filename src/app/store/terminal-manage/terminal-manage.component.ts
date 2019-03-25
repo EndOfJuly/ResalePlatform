@@ -70,7 +70,7 @@ export class TerminalManageComponent implements OnInit {
 
   createTerminal(type) {
     console.log(type);
-    this.router.navigate(['./store/terminal-manage/edit-terminal']);
+    this.router.navigate(['/home/store/terminal-manage/edit-terminal']);
   }
 
 }

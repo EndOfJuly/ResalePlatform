@@ -47,7 +47,7 @@ const routes: Routes = [
           { path: 'staff-account', component: StaffAccountComponent, data: { breadcrumb: '员工账号' } },
           { path: 'staff-account/edit-staff', component: EditStaffComponent, data: { breadcrumb: '新增员工' } },
           { path: 'terminal-manage', component: TerminalManageComponent, data: { breadcrumb: '终端管理' } },
-          { path: 'edit-terminal', component: EditTerminalComponent, data: { breadcrumb: '新增终端' } }
+          { path: 'terminal-manage/edit-terminal', component: EditTerminalComponent, data: { breadcrumb: '新增终端' } }
         ]
       },
       {
