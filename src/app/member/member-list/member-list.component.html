@@ -20,7 +20,7 @@
         <th>累计消费金额</th>
         <th>累计消费次数</th>
         <th>最后消费时间</th>
-        <th>?</th>
+        <th>操作</th>
       </tr>
     </thead>
     <tbody>
@@ -34,7 +34,24 @@
         <td>{{data.expense}}</td>
         <td>{{data.expenseTimes}}</td>
         <td>{{data.lastExpenseTime}}</td>
-        <td>{{data.what}}</td>
+        <td>
+          <nz-dropdown [nzPlacement]="'bottomLeft'">
+            <a nz-dropdown>
+              ...
+            </a>
+            <ul nz-menu nzSelectable>
+              <li nz-menu-item>
+                <a>详情</a>
+              </li>
+              <li nz-menu-item>
+                <a>启用/禁用</a>
+              </li>
+              <li nz-menu-item>
+                <a>交易明细</a>
+              </li>
+            </ul>
+          </nz-dropdown>
+        </td>
       </tr>
     </tbody>
   </nz-table>

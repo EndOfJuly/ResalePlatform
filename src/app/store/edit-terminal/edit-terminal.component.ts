@@ -36,4 +36,8 @@ export class EditTerminalComponent implements OnInit {
     });
   }
 
+  cancelClick() {
+    this.router.navigate(['/home/store/terminal-manage']);
+  }
+
 }

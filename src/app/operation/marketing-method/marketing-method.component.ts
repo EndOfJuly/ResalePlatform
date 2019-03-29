@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-marketing-method',
@@ -37,9 +38,16 @@ export class MarketingMethodComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+
+  editMarketingMethod(type) {
+    this.router.navigate(['/home/operation/marketing-method/edit-marketing-method']);
   }
 
 }

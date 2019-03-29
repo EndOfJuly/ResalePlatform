@@ -39,6 +39,15 @@
     </nz-form-control>
   </nz-form-item>
 
+  <nz-form-item nz-row style="margin-bottom:8px;">
+    <nz-form-control [nzSpan]="7" [nzOffset]="6">
+      <div style="display: flex;justify-content: space-around">
+        <button nz-button nzType="primary">保存</button>
+        <button nz-button (click)="cancelClick()">取消</button>
+      </div>
+    </nz-form-control>
+  </nz-form-item>
+
 </form>
 
 <!-- </nz-card> -->

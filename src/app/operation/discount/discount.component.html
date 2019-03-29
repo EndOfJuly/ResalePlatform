@@ -4,7 +4,7 @@
     <span style="margin-left: 1rem;display: inline-block;">高级搜索</span>
   </div>
   <div>
-    <button style="width: 6rem;height: 2rem;" nz-button nzType="primary">新增优惠券</button>
+    <button style="width: 7rem;height: 2rem;" nz-button nzType="primary" (click)="editDiscount('new')">新增优惠券</button>
   </div>
 </div>
 <div style="margin-top: 0.5rem">
@@ -34,7 +34,24 @@
         <td>{{data.usableRange}}</td>
         <td>{{data.discountType}}</td>
         <td>{{data.discountStatus}}</td>
-        <td>{{data.what}}</td>
+        <td>
+          <nz-dropdown [nzPlacement]="'bottomLeft'">
+            <a nz-dropdown>
+              ...
+            </a>
+            <ul nz-menu nzSelectable>
+              <li nz-menu-item>
+                <a>编辑</a>
+              </li>
+              <li nz-menu-item>
+                <a>删除</a>
+              </li>
+              <li nz-menu-item>
+                <a>启用/禁用</a>
+              </li>
+            </ul>
+          </nz-dropdown>
+        </td>
       </tr>
     </tbody>
   </nz-table>

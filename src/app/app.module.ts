@@ -27,11 +27,13 @@ import { MarketingMethodComponent } from './operation/marketing-method/marketing
 import { HomeComponent } from './normal/home/home.component';
 
 import { NgxEchartsModule } from 'ngx-echarts';
-import { NewDiscountComponent } from './operation/new-discount/new-discount.component';
-import { NewMarketingMethodComponent } from './operation/new-marketing-method/new-marketing-method.component';
 import { EditStoreComponent } from './store/edit-store/edit-store.component';
 import { EditStaffComponent } from './store/edit-staff/edit-staff.component';
 import { EditTerminalComponent } from './store/edit-terminal/edit-terminal.component';
+import { EditMemberListComponent } from './member/edit-member-list/edit-member-list.component';
+import { EditMemberTypeComponent } from './member/edit-member-type/edit-member-type.component';
+import { EditDiscountComponent } from './operation/edit-discount/edit-discount.component';
+import { EditMarketingMethodComponent } from './operation/edit-marketing-method/edit-marketing-method.component';
 
 registerLocaleData(zh);
 
@@ -54,11 +56,13 @@ registerLocaleData(zh);
     DiscountComponent,
     MarketingMethodComponent,
     HomeComponent,
-    NewDiscountComponent,
-    NewMarketingMethodComponent,
     EditStoreComponent,
     EditStaffComponent,
-    EditTerminalComponent
+    EditTerminalComponent,
+    EditMemberListComponent,
+    EditMemberTypeComponent,
+    EditDiscountComponent,
+    EditMarketingMethodComponent
   ],
   imports: [
     BrowserModule,

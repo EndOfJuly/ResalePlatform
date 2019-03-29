@@ -19,6 +19,8 @@ import { SystemNoticeComponent } from './system/system-notice/system-notice.comp
 import { EditStoreComponent } from './store/edit-store/edit-store.component';
 import { EditStaffComponent } from './store/edit-staff/edit-staff.component';
 import { EditTerminalComponent } from './store/edit-terminal/edit-terminal.component';
+import { EditDiscountComponent } from './operation/edit-discount/edit-discount.component';
+import { EditMarketingMethodComponent } from './operation/edit-marketing-method/edit-marketing-method.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -61,7 +63,9 @@ const routes: Routes = [
         path: 'operation', data: { breadcrumb: '营销' },
         children: [
           { path: 'discount', component: DiscountComponent, data: { breadcrumb: '优惠券' } },
-          { path: 'marketing-method', component: MarketingMethodComponent, data: { breadcrumb: '线下活动' } }
+          { path: 'discount/edit-discount', component: EditDiscountComponent, data: { breadcrumb: '新增优惠券' } },
+          { path: 'marketing-method', component: MarketingMethodComponent, data: { breadcrumb: '线下活动' } },
+          { path: 'marketing-method/edit-marketing-method', component: EditMarketingMethodComponent, data: { breadcrumb: '新增活动' } }
         ]
       },
       {

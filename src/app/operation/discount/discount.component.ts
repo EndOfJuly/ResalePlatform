@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-discount',
@@ -58,9 +59,17 @@ export class DiscountComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
+
+
+  editDiscount(type) {
+    this.router.navigate(['/home/operation/discount/edit-discount']);
+  }
+
 
 }
