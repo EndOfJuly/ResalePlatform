@@ -54,12 +54,13 @@ export class EditStoreComponent implements OnInit {
 
   ngOnInit() {
     this.validateForm = this.fb.group({
-      storeName: [null, [Validators.required, Validators.maxLength(10), Validators.minLength(3)]],
+      storeName: [{ value: 'this.roleParams.roleName', disabled: true }],
       region: [null, [Validators.required]],
       storeAddress: [null, [Validators.required, Validators.maxLength(10), Validators.minLength(3)]],
       storeContact: [null, [Validators.required, Validators.maxLength(6), Validators.minLength(2)]],
       contactTel: [null, [Validators.required, Validators.maxLength(13), Validators.minLength(13)]]
     });
+
   }
 
   onChanges(values: any): void {
